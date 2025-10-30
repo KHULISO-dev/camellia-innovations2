@@ -1,0 +1,307 @@
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .program-card.large {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .product-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navigation */
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow-lg);
+        padding: 2rem 0;
+        gap: 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    /* Hero Section */
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .cta-button {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* General Sections */
+    section {
+        padding: 3rem 0;
+    }
+    
+    .page-content {
+        padding: 2rem 0;
+    }
+    
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+
+    /* Cards and Grids */
+    .divisions-grid,
+    .programs-grid,
+    .products-grid,
+    .services-grid.detailed,
+    .areas-grid,
+    .impact-grid,
+    .donation-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Specific Components */
+    .mission-card,
+    .vision-card,
+    .product-hero,
+    .collaboration-form,
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+    
+    .program-card.large {
+        padding: 2rem;
+    }
+    
+    .donation-option {
+        padding: 2rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    /* Smaller padding for mobile */
+    .mission-card,
+    .vision-card,
+    .product-hero,
+    .form-container,
+    .contact-form-container {
+        padding: 1rem;
+    }
+    
+    .program-card.large {
+        padding: 1.5rem;
+    }
+    
+    .service-card.detailed .service-header {
+        padding: 1.5rem;
+    }
+    
+    .service-card.detailed .service-content {
+        padding: 1.5rem;
+    }
+
+    /* Stack product features */
+    .product-features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* High-resolution displays */
+@media (min-resolution: 192dpi) {
+    .logo-icon {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .footer,
+    .cta-button,
+    .hero-background {
+        display: none !important;
+    }
+    
+    .hero {
+        background: white !important;
+        color: black !important;
+        height: auto !important;
+    }
+    
+    .hero-title,
+    .hero-subtitle {
+        color: black !important;
+    }
+    
+    .page {
+        display: block !important;
+        break-inside: avoid;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .hero-background {
+        display: none;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-dark: #E2E8F0;
+        --text-light: #A0AEC0;
+        --background-light: #2D3748;
+        --white: #1A202C;
+    }
+    
+    .header {
+        background: rgba(26, 32, 44, 0.95);
+    }
+    
+    .nav-link {
+        color: var(--text-dark);
+    }
+    
+    .mission-card,
+    .vision-card,
+    .product-card,
+    .service-card,
+    .area-card,
+    .impact-card,
+    .donation-option,
+    .form-container,
+    .contact-form-container {
+        background: #2D3748;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+}

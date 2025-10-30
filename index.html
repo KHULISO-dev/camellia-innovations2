@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camellia Innovations | Merging Nature, AI, and Biotechnology</title>
+    <meta name="description" content="South African Hybrid Biotechnology Start-up integrating AI, Bioinformatics, and Sustainable Manufacturing">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo" data-page="home">
+                    <div class="logo-icon">🌿</div>
+                    <span class="logo-text">Camellia Innovations</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#home" class="nav-link" data-page="home">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link" data-page="about">About Us</a></li>
+                    <li class="nav-item"><a href="#programs" class="nav-link" data-page="programs">Programs</a></li>
+                    <li class="nav-item"><a href="#products" class="nav-link" data-page="products">Products</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link" data-page="services">Services</a></li>
+                    <li class="nav-item"><a href="#collaborations" class="nav-link" data-page="collaborations">Collaborations 🤝</a></li>
+                    <li class="nav-item"><a href="#donations" class="nav-link" data-page="donations">Donations 💚</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link" data-page="contact">Contact 📩</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+        <!-- Home/Hero Section (Default Page) -->
+        <section class="page active" id="home-page">
+            <div class="hero">
+                <div class="hero-background">
+                    <canvas id="scientificCanvas"></canvas>
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Merging <span class="highlight">Nature</span>, 
+                        <span class="highlight">AI</span>, and 
+                        <span class="highlight">Biotechnology</span> to Build a Sustainable Future
+                    </h1>
+                    <p class="hero-subtitle">Pioneering African Innovation in Bioinformatics and Sustainable Biomanufacturing</p>
+                    <div class="hero-buttons">
+                        <button class="cta-button" data-page="about">
+                            Discover Our Mission <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="cta-button secondary" data-page="divisions">
+                            Explore Divisions <i class="fas fa-flask"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other pages will be loaded here dynamically -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <div class="logo-icon">🌿</div>
+                        <span class="logo-text">Camellia Innovations</span>
+                    </div>
+                    <p>Merging Nature, AI, and Biotechnology for a Sustainable Future</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about" data-page="about">About Us</a></li>
+                        <li><a href="#programs" data-page="programs">Our Programs</a></li>
+                        <li><a href="#products" data-page="products">Products</a></li>
+                        <li><a href="#contact" data-page="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <p>Registration No.: 2024/631831/07</p>
+                    <p>© 2025 Camellia Innovations (Pty) Ltd</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    </div>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@camelliainnovations.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> South Africa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="js/router.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
