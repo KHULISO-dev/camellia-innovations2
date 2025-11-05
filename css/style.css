@@ -1242,4 +1242,15 @@ body {
     }
     
     .program-card.large {
-        grid
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .logo-image {
+        height: 35px;
+    }
+    
+    .hero-background-image {
+        background-position: center center;
+    }
+}
