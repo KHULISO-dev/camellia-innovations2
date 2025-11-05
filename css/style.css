@@ -918,7 +918,8 @@ body {
 }
 
 .contact-item p {
-    color: var(--text-light);
+    color: var(--text-dark);
+    font-weight: 500;
 }
 
 .social-contact h4 {
@@ -1148,6 +1149,49 @@ body {
     display: none;
 }
 
+/* ===== UPDATED SECTION BACKGROUNDS ===== */
+
+/* Programs Section Background */
+#programs-page .page-content {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 4rem 0;
+}
+
+/* Products Section Background */
+#products-page .page-content {
+    background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e8 100%);
+    padding: 4rem 0;
+}
+
+/* Services Section Background */
+#services-page .page-content {
+    background: linear-gradient(135deg, #e3f2fd 0%, #e1f5fe 100%);
+    padding: 4rem 0;
+}
+
+/* Collaborations Section Background */
+#collaborations-page .page-content {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffecb3 100%);
+    padding: 4rem 0;
+}
+
+/* Contact Section Background */
+#contact-page .page-content {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+    padding: 4rem 0;
+}
+
+/* Ensure cards stand out on colored backgrounds */
+#programs-page .program-card.large,
+#products-page .product-card,
+#services-page .service-card.detailed,
+#collaborations-page .area-card,
+#collaborations-page .form-container,
+#contact-page .contact-form-container {
+    background: var(--white);
+    box-shadow: var(--shadow-lg);
+}
+
 /* For smaller screens */
 @media (max-width: 768px) {
     .hamburger {
@@ -1198,15 +1242,4 @@ body {
     }
     
     .program-card.large {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .logo-image {
-        height: 35px;
-    }
-    
-    .hero-background-image {
-        background-position: center center;
-    }
-}
+        grid
