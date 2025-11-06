@@ -1307,4 +1307,18 @@ body {
     color: var(--text-dark);
     font-weight: 500;
 }
+    /* PREVENT HOME PAGE SCROLLING */
+#home-page {
+    height: 100vh;
+    overflow: hidden !important;
+}
+
+#home-page .hero {
+    height: 100vh;
+    overflow: hidden !important;
+}
+
+body.home-page-active {
+    overflow: hidden;
+}
 }
