@@ -48,22 +48,7 @@ class Router {
     }
 
     async loadPage(page) {
-        this.showLoading();
-        
-        // Hide current page
-        const currentPageElement = document.getElementById(`${this.currentPage}-page`);
-        if (currentPageElement) {
-            currentPageElement.classList.remove('active');
-        }
-
-        // Update navigation
-        this.updateNavigation(page);
-
-        // Load new page
         await this.routes[page]();
-        this.currentPage = page;
-
-        this.hideLoading();
     }
 
     updateNavigation(page) {
@@ -89,6 +74,8 @@ class Router {
         const homePage = document.getElementById('home-page');
         homePage.classList.add('active');
         homePage.scrollIntoView({ behavior: 'smooth' });
+        this.updateNavigation('home');
+        this.currentPage = 'home';
     }
 
     async loadAbout() {
@@ -586,7 +573,15 @@ class Router {
                                     <i class="fas fa-envelope"></i>
                                     <div>
                                         <h4>Email</h4>
-                                        <p>info@camelliainnovations.com</p>
+                                        <p>camelliainnovations@outlook.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <div>
+                                        <h4>Phone</h4>
+                                        <p>060 465 7584</p>
                                     </div>
                                 </div>
                                 
@@ -595,14 +590,6 @@ class Router {
                                     <div>
                                         <h4>Location</h4>
                                         <p>South Africa</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="contact-item">
-                                    <i class="fas fa-phone"></i>
-                                    <div>
-                                        <h4>Phone</h4>
-                                        <p>+27 XX XXX XXXX</p>
                                     </div>
                                 </div>
                                 
@@ -674,6 +661,14 @@ class Router {
     }
 
     async loadPageContent(pageName, content) {
+        this.showLoading();
+        
+        // Hide current page
+        const currentPageElement = document.getElementById(`${this.currentPage}-page`);
+        if (currentPageElement) {
+            currentPageElement.classList.remove('active');
+        }
+
         let pageElement = document.getElementById(`${pageName}-page`);
         
         if (!pageElement) {
@@ -687,8 +682,14 @@ class Router {
         pageElement.classList.add('active');
         pageElement.scrollIntoView({ behavior: 'smooth' });
         
+        // Update navigation
+        this.updateNavigation(pageName);
+        
         // Initialize page-specific JavaScript if needed
         this.initializePage(pageName);
+        
+        this.currentPage = pageName;
+        this.hideLoading();
     }
 
     initializePage(pageName) {
@@ -726,7 +727,7 @@ class Router {
                         alert('Redirecting to PayPal... (This would link to actual PayPal in production)');
                         break;
                     case 'bank':
-                        alert('Please email info@camelliainnovations.com for bank transfer details.');
+                        alert('Please email camelliainnovations@outlook.com for bank transfer details.');
                         break;
                     case 'corporate':
                         this.navigateTo('collaborations');
